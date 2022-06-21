@@ -6,7 +6,7 @@ const app = express(); //Initialsed and server ready
 
 app.use(express.static("public")); // display my index.html file 
 
-let port =3000;
+let port = process.env.PORT || 3000;
 let server= app.listen(port,() => {
 
     console.log("Listening to port " + port);
